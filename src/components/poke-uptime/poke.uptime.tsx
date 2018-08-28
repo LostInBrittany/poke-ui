@@ -162,7 +162,7 @@ export class PokeUptime {
     });;
   }
 
-  render() {
+  render()  {
     if (!this.services || this.services.length == 0) {
       console.log('[poke-ui] rendering empty', this.services);
       

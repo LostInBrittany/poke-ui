@@ -55,6 +55,12 @@ declare global {
       'baseUrl': string;
     }
 
+    interface PokeUptimeCheckFirefox {
+      'check': PokeCheck;
+      'domain': string;
+      'zones': { [dynamic:string] : PokeCheckResultByZone };
+    }
+
     interface PokeUptimeCheck {
       'check': PokeCheck;
       'domain': string;
@@ -110,6 +116,14 @@ declare global {
     };
     
 
+    interface HTMLPokeUptimeCheckFirefoxElement extends StencilComponents.PokeUptimeCheckFirefox, HTMLStencilElement {}
+
+    var HTMLPokeUptimeCheckFirefoxElement: {
+      prototype: HTMLPokeUptimeCheckFirefoxElement;
+      new (): HTMLPokeUptimeCheckFirefoxElement;
+    };
+    
+
     interface HTMLPokeUptimeCheckElement extends StencilComponents.PokeUptimeCheck, HTMLStencilElement {}
 
     var HTMLPokeUptimeCheckElement: {
@@ -141,6 +155,7 @@ declare global {
     'poke-logo': JSXElements.PokeLogoAttributes;
     'poke-sign-in': JSXElements.PokeSignInAttributes;
     'poke-ui': JSXElements.PokeUiAttributes;
+    'poke-uptime-check-firefox': JSXElements.PokeUptimeCheckFirefoxAttributes;
     'poke-uptime-check': JSXElements.PokeUptimeCheckAttributes;
     'poke-uptime-service': JSXElements.PokeUptimeServiceAttributes;
     'poke-uptime': JSXElements.PokeUptimeAttributes;
@@ -168,6 +183,12 @@ declare global {
       'baseUrl'?: string;
     }
 
+    export interface PokeUptimeCheckFirefoxAttributes extends HTMLAttributes {
+      'check'?: PokeCheck;
+      'domain'?: string;
+      'zones'?: { [dynamic:string] : PokeCheckResultByZone };
+    }
+
     export interface PokeUptimeCheckAttributes extends HTMLAttributes {
       'check'?: PokeCheck;
       'domain'?: string;
@@ -193,6 +214,7 @@ declare global {
     'poke-logo': HTMLPokeLogoElement
     'poke-sign-in': HTMLPokeSignInElement
     'poke-ui': HTMLPokeUiElement
+    'poke-uptime-check-firefox': HTMLPokeUptimeCheckFirefoxElement
     'poke-uptime-check': HTMLPokeUptimeCheckElement
     'poke-uptime-service': HTMLPokeUptimeServiceElement
     'poke-uptime': HTMLPokeUptimeElement
@@ -203,6 +225,7 @@ declare global {
     'poke-logo': HTMLPokeLogoElement;
     'poke-sign-in': HTMLPokeSignInElement;
     'poke-ui': HTMLPokeUiElement;
+    'poke-uptime-check-firefox': HTMLPokeUptimeCheckFirefoxElement;
     'poke-uptime-check': HTMLPokeUptimeCheckElement;
     'poke-uptime-service': HTMLPokeUptimeServiceElement;
     'poke-uptime': HTMLPokeUptimeElement;

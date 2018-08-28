@@ -164,11 +164,11 @@ export class PokeUptimeService {
           <div class="poke-checks">
             {
               this.checks.map( (check) =>
-                <poke-uptime-check
+                <poke-uptime-check-firefox
                     domain={this.service.domain}
                     zones={check.zones}
                     check={check}
-                    warp10-token={this.warp10Token}></poke-uptime-check>
+                    warp10-token={this.warp10Token}></poke-uptime-check-firefox>
               )
             }
           </div>
